@@ -23,6 +23,9 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] float groundCheckRadius = 0.1f;
     [SerializeField] LayerMask groundLayer;
 
+    [Header("Swap Parameters")]
+    [SerializeField] bool isAlive;
+
     void Start()
     {
         // Autoreferenciar componentes: nombre de variable = GetComponent()
@@ -30,6 +33,7 @@ public class PlayerController2D : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         //playerAnim = GetComponent<Animator>();
         isFacingRight = true;
+        isAlive = false;
     }
 
     void Update()
@@ -104,6 +108,11 @@ public class PlayerController2D : MonoBehaviour
                 playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             }
         }
+    }
+
+    public void HandleSwap(InputAction.CallbackContext context)
+    {
+        isAlive = !isAlive;
     }
 
     #endregion
