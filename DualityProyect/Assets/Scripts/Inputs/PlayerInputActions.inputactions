@@ -61,7 +61,7 @@
                 {
                     "name": "down",
                     "id": "b82df753-5047-4b89-9b1f-a20bf1cd3745",
-                    "path": "",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -72,7 +72,7 @@
                 {
                     "name": "left",
                     "id": "d5903620-7c80-47cf-b844-e5086d0dea5a",
-                    "path": "",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -83,7 +83,7 @@
                 {
                     "name": "right",
                     "id": "ab86fa6a-0b8e-47ba-b860-b9d158cba100",
-                    "path": "",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -93,8 +93,19 @@
                 },
                 {
                     "name": "",
+                    "id": "95f62b3e-2678-4b85-af93-45af8af17bec",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f754e823-0344-4f75-bb5d-415cc7072d66",
-                    "path": "",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
