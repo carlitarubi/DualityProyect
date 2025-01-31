@@ -112,7 +112,10 @@ public class PlayerController2D : MonoBehaviour
 
     public void HandleSwap(InputAction.CallbackContext context)
     {
-        isAlive = !isAlive;
+        if (context.started)
+        {
+            isAlive = !isAlive;
+        }
     }
 
     #endregion
