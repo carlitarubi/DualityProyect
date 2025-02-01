@@ -46,4 +46,16 @@ public class PruebaPlayerController : MonoBehaviour
         }
         
     }
-}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            GameManager.Instance.points += 1;
+            //GetComponent<Soundpickup>().PlayPickupSound();
+            other.gameObject.SetActive(false);
+
+        }
+    }
+
+    }
