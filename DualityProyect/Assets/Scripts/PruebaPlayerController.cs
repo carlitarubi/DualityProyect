@@ -12,7 +12,12 @@ public class PruebaPlayerController : MonoBehaviour
 
     //Variables de estadística del player
     public float speed;
-    public float jumpForce; 
+    public float jumpForce;
+
+    [SerializeField] bool isGrounded;
+    [SerializeField] GameObject groundCheck;
+    [SerializeField] LayerMask groundLayer; 
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
@@ -22,6 +27,7 @@ public class PruebaPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         Movement();
         Jump();
     }
@@ -34,7 +40,7 @@ public class PruebaPlayerController : MonoBehaviour
 
     void Jump()
     {
-       if(Input.GetKeyDown(KeyCode.Space ))
+       if(Input.GetKeyDown(KeyCode.Space )&&isGrounded ) 
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
