@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1788160486198139682}
   - component: {fileID: 2728279369577518432}
   - component: {fileID: 3561416946927574812}
-  - component: {fileID: 5867872742171548339}
   - component: {fileID: 2658116709256374511}
+  - component: {fileID: 2668924610542717250}
   m_Layer: 0
   m_Name: Square
   m_TagString: Player
@@ -161,29 +161,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &5867872742171548339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6171966172392408393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7479465c2bab9ef4980e46e80c230787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerRb: {fileID: 0}
-  playerInput: {fileID: 0}
-  speed: 5
-  isFacingRight: 0
-  jumpForce: 5
-  isGrounded: 1
-  groundCheck: {fileID: 1570198497294234544}
-  groundCheckRadius: 0.1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!114 &2658116709256374511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +188,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5867872742171548339}
+      - m_Target: {fileID: 2668924610542717250}
         m_TargetAssemblyTypeName: PlayerController2D, Assembly-CSharp
         m_MethodName: HandleMove
         m_Mode: 0
@@ -227,7 +204,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/Movement[/Keyboard/w]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5867872742171548339}
+      - m_Target: {fileID: 2668924610542717250}
         m_TargetAssemblyTypeName: PlayerController2D, Assembly-CSharp
         m_MethodName: HandleJump
         m_Mode: 0
@@ -241,11 +218,59 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e5da8e62-4f79-41f0-8d20-86b7795eda52
     m_ActionName: Gameplay/Jump
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2668924610542717250}
+        m_TargetAssemblyTypeName: PlayerController2D, Assembly-CSharp
+        m_MethodName: HandleSwap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 93a8c161-a781-4404-a169-5cb4fd335b82
+    m_ActionName: Gameplay/Swap[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2d7b4144-93cd-4859-b298-a4d4289879c1
+    m_ActionName: Gameplay/Reset[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b5224678-586d-42c3-94ea-ddfb4f69895c
+    m_ActionName: UI/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2668924610542717250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6171966172392408393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d252548c56a10634c8ca8a20196c2b88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRb: {fileID: 3561416946927574812}
+  playerInput: {fileID: 2658116709256374511}
+  speed: 5
+  isFacingRight: 0
+  jumpForce: 5
+  isGrounded: 1
+  groundCheck: {fileID: 1570198497294234544}
+  groundCheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  isAlive: 0
 --- !u!1 &8462741006744927876
 GameObject:
   m_ObjectHideFlags: 0
