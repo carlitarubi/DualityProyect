@@ -135,11 +135,11 @@ public class PlayerController2D : MonoBehaviour
         {
             if (isAlive == true)
             {
-                transform.position += new Vector3(0, -12, 0);
+                transform.position += new Vector3(0, -11, 0);
             } 
             else
             {
-                transform.position += new Vector3(0, 12, 0);
+                transform.position += new Vector3(0, 11, 0);
             }
             isAlive = !isAlive;
         }
