@@ -49,7 +49,7 @@ public class PruebaPlayerController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider2D other)
     {
         if (other.gameObject.CompareTag("PickUp"))
         {
