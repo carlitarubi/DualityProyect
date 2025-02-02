@@ -33,7 +33,7 @@ public class PlayerController2D : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerAnim = GetComponent<Animator>();
         isFacingRight = true;
-        isAlive = false;
+        isAlive = true;
     }
 
     void Update()
@@ -114,6 +114,14 @@ public class PlayerController2D : MonoBehaviour
     {
         if (context.started)
         {
+            if (isAlive == true)
+            {
+                transform.position += new Vector3(0, -11, 0);
+            } 
+            else
+            {
+                transform.position += new Vector3(0, 11, 0);
+            }
             isAlive = !isAlive;
         }
     }
