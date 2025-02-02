@@ -84,9 +84,9 @@ public class PlayerController2D : MonoBehaviour
     void HandleAnimations()
     {
         // Conector de valores generales con parametros de animación
-        playerAnim.SetBool("isJumping", !isGrounded);
-        if (moveInput.x > 0 || moveInput.x < 0) playerAnim.SetBool("isRunning", true);
-        else playerAnim.SetBool("isRunning", false);
+        playerAnim.SetBool("Jump", !isGrounded);
+        if (moveInput.x > 0 || moveInput.x < 0) playerAnim.SetBool("Run", true);
+        else playerAnim.SetBool("Run", false);
     }
 
     #region Input Events
