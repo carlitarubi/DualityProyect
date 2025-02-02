@@ -8,7 +8,7 @@ public class PlayerController2D : MonoBehaviour
     // Referencias generales
     [SerializeField] Rigidbody2D playerRb; // Referencia al rigidbody del player
     [SerializeField] PlayerInput playerInput; // Referencia al gestor del input del jugador
-    //[SerializeField] Animator playerAnim; // Referencia al animator para gestionar las transiciones de animación
+    [SerializeField] Animator playerAnim; // Referencia al animator para gestionar las transiciones de animación
 
     [Header("Movement Parameters")]
     private Vector3 moveInput; //Almacén del input del player
@@ -31,14 +31,14 @@ public class PlayerController2D : MonoBehaviour
         // Autoreferenciar componentes: nombre de variable = GetComponent()
         playerRb = GetComponent<Rigidbody2D>();
         playerInput = GetComponent<PlayerInput>();
-        //playerAnim = GetComponent<Animator>();
+        playerAnim = GetComponent<Animator>();
         isFacingRight = true;
         isAlive = false;
     }
 
     void Update()
     {
-        //HandleAnimations();
+        HandleAnimations();
 
         GroundCheck();
 
@@ -81,13 +81,13 @@ public class PlayerController2D : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
-    /*void HandleAnimations()
+    void HandleAnimations()
     {
         // Conector de valores generales con parametros de animación
         playerAnim.SetBool("isJumping", !isGrounded);
         if (moveInput.x > 0 || moveInput.x < 0) playerAnim.SetBool("isRunning", true);
         else playerAnim.SetBool("isRunning", false);
-    }*/
+    }
 
     #region Input Events
 
