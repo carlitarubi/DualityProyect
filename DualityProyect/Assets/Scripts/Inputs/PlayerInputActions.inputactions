@@ -189,7 +189,7 @@
                 {
                     "name": "",
                     "id": "bb464595-c4d6-49d9-a79d-faa9b787c0c5",
-                    "path": "<Keyboard>/shift",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -201,6 +201,17 @@
                     "name": "",
                     "id": "14f9557a-dda4-435f-901c-a3b54b3151c2",
                     "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swap",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9d65072-5ad0-4385-8708-b728c48fb3b4",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

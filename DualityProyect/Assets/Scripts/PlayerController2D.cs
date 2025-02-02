@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem; // Librería para que funcione el New Input System
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement; // Librería para que funcione el New Input System
 
 public class PlayerController2D : MonoBehaviour
 {
@@ -33,7 +36,7 @@ public class PlayerController2D : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         playerAnim = GetComponent<Animator>();
         isFacingRight = true;
-        isAlive = false;
+        isAlive = true;
     }
 
     void Update()
@@ -89,6 +92,12 @@ public class PlayerController2D : MonoBehaviour
         else playerAnim.SetBool("Run", false);
     }
 
+    private static void RestartScene()
+    {
+        var currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
+    }
+
     #region Input Events
 
     // Para crear un evento:
@@ -114,7 +123,24 @@ public class PlayerController2D : MonoBehaviour
     {
         if (context.started)
         {
+            if (isAlive == true)
+            {
+                transform.position += new Vector3(0, -11, 0);
+            } 
+            else
+            {
+                transform.position += new Vector3(0, 11, 0);
+            }
             isAlive = !isAlive;
+        }
+    }
+
+    public void HandleReset(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("hola");
+            RestartScene();
         }
     }
 
