@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CarlaM.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/CarlaC.unity
+    guid: bcb5698323a48b84889d47138b9071de
+  - enabled: 1
+    path: Assets/Scenes/Raul.unity
+    guid: 37c0eed3067a1484ea2d38665c10b102
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: 44de5d32cb13e374ea8da00221d6e052
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 2660e62e5bad45143b5291fd99c60203
   m_configObjects: {}

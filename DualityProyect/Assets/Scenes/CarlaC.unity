@@ -122,6 +122,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33848295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1446450037794589168, guid: c0ed9923e8322ae4785c81ef1e486139, type: 3}
+  m_PrefabInstance: {fileID: 5489081418735663380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &33848307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33848295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a1a4b4a6e4a6584ebcd8bf8fab678bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Escena: Menu
 --- !u!1001 &49398331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3480,6 +3498,7 @@ GameObject:
   - component: {fileID: 1403964797}
   - component: {fileID: 1403964796}
   - component: {fileID: 1403964799}
+  - component: {fileID: 1403964800}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3555,7 +3574,7 @@ Transform:
   m_GameObject: {fileID: 1403964795}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 8.62, z: -10}
+  m_LocalPosition: {x: 0, y: 9.647693, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3605,6 +3624,40 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1403964800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403964795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1471480464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4187,7 +4240,7 @@ PrefabInstance:
     - target: {fileID: 590133192797622471, guid: 8c1e68b2d9cc2fc40b0ef5b309f501d9, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1177051983}
     - target: {fileID: 3339602357437602588, guid: 8c1e68b2d9cc2fc40b0ef5b309f501d9, type: 3}
       propertyPath: m_BoundingShape2D
       value: 
@@ -4198,7 +4251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7956677162520221793, guid: 8c1e68b2d9cc2fc40b0ef5b309f501d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 9.647693
       objectReference: {fileID: 0}
     - target: {fileID: 7956677162520221793, guid: 8c1e68b2d9cc2fc40b0ef5b309f501d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21332,6 +21385,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PickUp
       objectReference: {fileID: 0}
+    - target: {fileID: 6962995452530522629, guid: c0ed9923e8322ae4785c81ef1e486139, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8431696309178816435, guid: c0ed9923e8322ae4785c81ef1e486139, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.81
@@ -21375,7 +21432,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1446450037794589168, guid: c0ed9923e8322ae4785c81ef1e486139, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 33848307}
   m_SourcePrefab: {fileID: 100100000, guid: c0ed9923e8322ae4785c81ef1e486139, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

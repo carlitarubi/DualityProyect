@@ -5,17 +5,11 @@ using UnityEngine.SceneManagement; //Libreria que permite usar metodos de carga/
 
 public class SceneChanger : MonoBehaviour
 {
-    public void SceneLoader(int sceneToLoad)
-    {
-        SceneManager.LoadScene(sceneToLoad);
-    }
+   
 
-    public void ExitGame()
-    {
-        Application.Quit(); //Salir de la aplicación, cierra el juego completamente
-    }
+    
 
-    [SerializeField] private string Escena;
+    public string Escena;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
