@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PickUpScript : MonoBehaviour
 {
-    
+   
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

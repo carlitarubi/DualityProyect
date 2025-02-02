@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public TMP_Text pointsText;
 
-    public int currentPoints;
-    public int lifePoints;
-    public int winPoints = 5;
-    public GameObject winGoal;
-
+    
+    
     private static GameManager _instance;
 
     public static GameManager Instance
@@ -27,30 +25,24 @@ public class GameManager : MonoBehaviour
 
     //Variables
     public int points;
-    public int Winpoints;
-
+    public int winpoints = 5;
+    public TMP_Text pointsText;
 
     private void Awake()
     {
         _instance = this;
         
+
     }
-    private void Update()
-    {
-        if (currentPoints < 0) { currentPoints = 0; }
-        
-        UIUpdate();
-    }
+
 
     public void PointsUp(int gain)
     {
         points += gain;
+        pointsText.text = "Medicines " + points.ToString() + "/" + winpoints.ToString();
     }
 
-    void UIUpdate()
-    {
-        pointsText.text = "Medicines " + currentPoints.ToString() + "/" + winPoints.ToString();
+   
 
-    }
 
 }

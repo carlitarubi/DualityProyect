@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -30,6 +31,7 @@ public class PruebaPlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.transform.position, 0.1f, groundLayer);
         Movement();
         Jump();
+       
     }
 
     void Movement()
@@ -57,5 +59,6 @@ public class PruebaPlayerController : MonoBehaviour
 
         }
     }
+    
 
-    }
+}
