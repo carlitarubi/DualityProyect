@@ -70,7 +70,16 @@ public class PlayerController2D : MonoBehaviour
     {
         playerRb.velocity = new Vector3(moveInput.x * speed, playerRb.velocity.y, 0);
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PickUp"))
+        {
+            GameManager.Instance.points += 1;
+            //GetComponent<Soundpickup>().PlayPickupSound();
+            other.gameObject.SetActive(false);
 
+        }
+    }
     void Flip()
     {
         Vector3 currentScale = transform.localScale;

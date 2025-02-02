@@ -493,7 +493,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "RULES: \n\t> USE THE ARROWS TO MOVE AROUND THE HOSPITAL\n\t> USE THE SPACE
-    TO JUMP AND CATCH THE PICKUPS\n\t> CATCH THE MEDICINES TO REACH THE END"
+    TO JUMP AND CATCH THE PICKUPS\n\t> USE THE SHIFT TO CHANGE TO DEATH MODE\n\t>
+    CATCH THE MEDICINES TO REACH THE END"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
   m_sharedMaterial: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
