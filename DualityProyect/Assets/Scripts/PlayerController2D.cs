@@ -128,27 +128,28 @@ public class PlayerController2D : MonoBehaviour
         }
     }
 
+    // Cambia de plano
     public void HandleSwap(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             if (isAlive == true)
             {
-                transform.position += new Vector3(0, -11, 0);
+                transform.position += new Vector3(0, -12, 0);
             } 
             else
             {
-                transform.position += new Vector3(0, 11, 0);
+                transform.position += new Vector3(0, 12, 0);
             }
             isAlive = !isAlive;
         }
     }
 
+    // Reinicia la escena
     public void HandleReset(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            Debug.Log("hola");
             RestartScene();
         }
     }
