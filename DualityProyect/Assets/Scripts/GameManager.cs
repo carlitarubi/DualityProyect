@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
     public int points;
     public int winpoints = 5;
     public TMP_Text pointsText;
+    //public int escena;
 
     private void Awake()
     {
@@ -42,7 +44,7 @@ public class GameManager : MonoBehaviour
         pointsText.text = "Medicines " + points.ToString() + "/" + winpoints.ToString();
     }
 
-   
+    //
 
 
 }

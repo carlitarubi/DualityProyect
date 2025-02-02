@@ -520,7 +520,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 326849600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 37c0eed3067a1484ea2d38665c10b102, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Raul
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &326849600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,7 +1246,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1476650520}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 37c0eed3067a1484ea2d38665c10b102, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Raul
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1476650520
 MonoBehaviour:
   m_ObjectHideFlags: 0
